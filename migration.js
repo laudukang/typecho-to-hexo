@@ -78,7 +78,7 @@ async.parallel([
           fs.appendFileSync(filename, "---\n");
           fs.appendFileSync(filename, "title: " + title + "\n");
           fs.appendFileSync(filename, "date: " + date + "\n");
-          fs.appendFileSync(filename, "updated: " + date + "\n");
+          fs.appendFileSync(filename, "updated: " + updated + "\n");
           if (category != null) {
             fs.appendFileSync(filename, "categories: " + category + "\n");
             oldUrl = getUrl(category, slug);
