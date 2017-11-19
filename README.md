@@ -3,6 +3,7 @@ Convert typecho blog to hexo by nodejs, update `config.json` and run `node migra
 
 ## Change log
 - fix `toMarkdown` method exception
+- `updated` filed support
 - generated post add seo filed `keywords` and `description`
 - git ignore `node_modules` folder
 
