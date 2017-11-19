@@ -83,13 +83,13 @@ async.parallel([
             fs.appendFileSync(filename, "categories: " + category + "\n");
             oldUrl = getUrl(category, slug);
           }
-          if (tags.length > 0) {
-            if (tags.length > 1) {
-              fs.appendFileSync(filename, "tags: [" + tags.toString() + "]\n");
-            } else {
-              fs.appendFileSync(filename, "tags: " + tags.toString() + "\n");
-            }
+
+          if (tags.length > 1) {
+            fs.appendFileSync(filename, "tags: [" + tags.toString() + "]\n");
+          } else {
+            fs.appendFileSync(filename, "tags: " + tags.toString() + "\n");
           }
+
           fs.appendFileSync(filename, "keywords:\n"); //custom filed for seo
           fs.appendFileSync(filename, "description:\n"); //custom filed for seo
           fs.appendFileSync(filename, "typecho_id: " + r.cid + "\n");
