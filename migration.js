@@ -74,6 +74,10 @@ async.parallel([
             fs.unlinkSync(filename);
           }
 
+          if (title.startsWith("[")) {
+            title = "\"" + title + "\"";
+          }
+          
           //渲染post开始
           fs.appendFileSync(filename, "---\n");
           fs.appendFileSync(filename, "title: " + title + "\n");
